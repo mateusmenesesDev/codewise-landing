@@ -1,10 +1,21 @@
 ---
-import Welcome from "../components/Welcome.tsx";
-import Layout from "../layouts/Layout.astro";
+import Header from '../components/Header.tsx';
+import Features from '../components/sections/Features/Features.tsx';
+import Hero from '../components/sections/Hero.tsx';
+import ProjectShowcase from '../components/sections/Projects/ProjectShowcase.tsx';
+import Testimonials from '../components/sections/Testimonials/Testimonials';
+import Layout from '../layouts/Layout.astro';
+
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
-  <Welcome />
+  <Header client:load />
+  <main>
+    <Hero />
+    <Features client:load />
+    <ProjectShowcase client:load />
+    <Testimonials client:load />
+  </main>
 </Layout>
