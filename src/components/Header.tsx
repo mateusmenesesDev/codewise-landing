@@ -1,6 +1,7 @@
 import { Menu, X } from 'lucide-react';
 import { useEffect, useState } from 'react';
 import { navigation } from '../constants/navigation';
+import CodeWiseLogo from './CodeWiseLogo';
 
 const Header = () => {
 	const [isScrolled, setIsScrolled] = useState(false);
@@ -26,8 +27,7 @@ const Header = () => {
 					href="#home"
 					className="font-bold text-2xl tracking-tight transition-opacity duration-300 hover:opacity-80"
 				>
-					<span className="text-primary">Code</span>
-					<span>Wise</span>
+					<CodeWiseLogo />
 				</a>
 
 				{/* Desktop Navigation */}
@@ -66,7 +66,7 @@ const Header = () => {
 
 			{/* Mobile Navigation */}
 			{mobileMenuOpen && (
-				<div className='absolute top-full right-0 left-0 bg-secondary px-4 py-6 md:hidden'>
+				<div className="absolute top-full right-0 left-0 bg-secondary px-4 py-6 md:hidden">
 					<nav className="flex flex-col space-y-4">
 						{navigation.map((item) => (
 							<a

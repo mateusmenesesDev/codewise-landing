@@ -1,3 +1,5 @@
+import CodeWiseLogo from './CodeWiseLogo';
+
 const Footer = () => {
 	return (
 		<footer className="bg-secondary py-16">
@@ -8,10 +10,9 @@ const Footer = () => {
 							href="#home"
 							className="inline-block font-bold text-2xl tracking-tight"
 						>
-							<span className="text-primary">Code</span>
-							<span>Wise</span>
+							<CodeWiseLogo />
 						</a>
-						<p className='max-w-md text-muted-foreground'>
+						<p className="max-w-md text-muted-foreground">
 							Connecting ambitious developers with expert mentors for
 							personalized guidance and career growth. Join our community and
 							take your coding journey to the next level.
@@ -85,13 +86,13 @@ const Footer = () => {
 
 						<div>
 							<h3 className="mb-4 font-semibold text-lg">Get Started</h3>
-							<p className='mb-4 text-muted-foreground'>
+							<p className="mb-4 text-muted-foreground">
 								Ready to begin your mentorship journey? Connect with us and take
 								the first step towards your goals.
 							</p>
 							<a
 								href="#contact"
-								className='inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 font-medium text-primary-foreground text-sm transition-colors hover:bg-primary/90'
+								className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 font-medium text-primary-foreground text-sm transition-colors hover:bg-primary/90"
 							>
 								Contact Us
 							</a>
