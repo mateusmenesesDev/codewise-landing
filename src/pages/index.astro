@@ -1,7 +1,7 @@
 ---
 import Footer from '../components/Footer.tsx';
 import Header from '../components/Header.tsx';
-import Contact from '../components/sections/Contact/Contact.tsx';
+import Contact from '../components/sections/Contact/Contact.astro';
 import FAQ from '../components/sections/FAQ/Faq.tsx';
 import Features from '../components/sections/Features/Features.tsx';
 import Hero from '../components/sections/Hero.tsx';
@@ -20,7 +20,7 @@ import Layout from '../layouts/Layout.astro';
     <Testimonials client:visible />
     <Pricing client:visible />
     <FAQ client:visible />
-    <Contact client:visible />
+    <Contact />
   </main>
   <Footer />
 </Layout>

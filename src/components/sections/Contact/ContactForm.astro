@@ -1,0 +1,116 @@
+---
+import { actions } from 'astro:actions';
+import { ArrowRight, Calendar, Loader2 } from 'lucide-react';
+---
+
+<div class="form-container">
+  <form 
+    class="space-y-6" 
+    data-astro-reload
+  >
+    <div>
+      <label class="mb-2 block font-medium text-sm" for="name">Name</label>
+      <input
+        id="name"
+        name="name"
+        type="text"
+        class="w-full rounded-lg border border-border bg-white/50 px-4 py-3 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+        placeholder="Your name"
+        required
+      />
+    </div>
+
+    <div>
+      <label class="mb-2 block font-medium text-sm" for="email">Email</label>
+      <input
+        id="email"
+        name="email"
+        type="email"
+        class="w-full rounded-lg border border-border bg-white/50 px-4 py-3 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+        placeholder="Your email"
+        required
+      />
+    </div>
+
+    <div>
+      <label class="mb-2 block font-medium text-sm" for="message">Message</label>
+      <textarea
+        id="message"
+        name="message"
+        class="h-32 w-full rounded-lg border border-border bg-white/50 px-4 py-3 focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary"
+        placeholder="Your message"
+        required
+      />
+    </div>
+
+    <button
+      type="submit"
+      class="flex w-full items-center justify-center rounded-lg bg-primary py-3 font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90"
+    >
+      <span class="submit-text">Send Message</span>
+      <span class="loading-text hidden">Sending...</span>
+      <ArrowRight className="ml-2 h-4 w-4 submit-icon" />
+      <Loader2 className="ml-2 h-4 w-4 animate-spin hidden loading-icon" />
+    </button>
+  </form>
+
+  <div class="success-message hidden">
+    <div class="mb-6 text-center">
+      <div class="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-full bg-primary/10 text-primary">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width={2} d="M5 13l4 4L19 7" />
+        </svg>
+      </div>
+      <h3 class="mb-2 font-bold text-xl">Application Completed!</h3>
+      <p class="text-muted-foreground">Your application has been completed, please schedule your first free mentorship.</p>
+    </div>
+    <a 
+      href="https://calendly.com/mateusppa10/free-mentorship" 
+      target="_blank" 
+      rel="noopener noreferrer"
+      class="flex w-full items-center justify-center rounded-lg bg-primary py-3 font-medium text-primary-foreground transition-all duration-300 hover:bg-primary/90"
+    >
+      Schedule Free Mentorship
+      <Calendar className="ml-2 h-4 w-4" />
+    </a>
+  </div>
+</div>
+
+<script>  
+  import { actions } from 'astro:actions';
+
+  const form = document.querySelector('form') as HTMLFormElement;
+  const successMessage = document.querySelector('.success-message') as HTMLDivElement;
+  const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
+  const submitText = submitButton?.querySelector('.submit-text') as HTMLSpanElement;
+  const loadingText = submitButton?.querySelector('.loading-text') as HTMLSpanElement;
+  const submitIcon = submitButton?.querySelector('.submit-icon') as SVGElement;
+  const loadingIcon = submitButton?.querySelector('.loading-icon') as SVGElement;
+
+  const handleSubmit = async (e: Event) => {
+    e.preventDefault();
+    
+    // Show loading state
+    submitText.classList.add('hidden');
+    loadingText.classList.remove('hidden');
+    submitIcon.classList.add('hidden');
+    loadingIcon.classList.remove('hidden');
+    submitButton.disabled = true;
+    
+    const formData = new FormData(form);
+    const response = await actions.send(formData);
+    if (response.data?.success) {
+      form.style.display = 'none';
+      successMessage.classList.remove('hidden');
+    } else {
+        // Reset button state if submission failed
+      submitText.classList.remove('hidden');
+      loadingText.classList.add('hidden');
+      submitIcon.classList.remove('hidden');
+      loadingIcon.classList.add('hidden');
+      submitButton.disabled = false;
+    }
+  };
+
+  form?.addEventListener('submit', handleSubmit);
+</script>
