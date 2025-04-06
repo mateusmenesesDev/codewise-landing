@@ -69,7 +69,7 @@
 	}
 
 	.section-padding {
-		@apply py-24 px-6 md:py-32 md:px-8;
+		@apply pb-24 px-6 md:pb-32 md:px-8;
 	}
 
 	.image-fade-mask {

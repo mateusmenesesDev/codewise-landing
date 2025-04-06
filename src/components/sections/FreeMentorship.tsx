@@ -29,10 +29,13 @@ export default function FreeMentorship() {
 	}, []);
 
 	return (
-		<section id="free-mentorship" className="section-padding bg-secondary/50">
+		<section
+			id="free-mentorship"
+			className='bg-secondary/50 px-6 pt-24 md:px-8 md:pt-32 md:pb-24'
+		>
 			<div className="container mx-auto">
 				<div
-					className="mx-auto mb-16 max-w-2xl translate-y-10 text-center opacity-0 transition-all duration-1000"
+					className="mx-auto max-w-2xl translate-y-10 text-center opacity-0 transition-all duration-1000"
 					ref={titleRef}
 				>
 					<div className="mb-3 font-medium text-primary">

@@ -1,7 +1,7 @@
 import { HelpCircle } from 'lucide-react';
 import { useEffect, useRef } from 'react';
-import FAQItem from './FaqItem';
 import { faqs } from '../../../constants/faqs';
+import FAQItem from './FaqItem';
 
 const FAQ = () => {
 	const titleRef = useRef<HTMLDivElement>(null);
@@ -30,7 +30,7 @@ const FAQ = () => {
 	}, []);
 
 	return (
-		<section id="faq" className="section-padding">
+		<section id="faq" className="section-padding pt-24 md:pt-32">
 			<div className="container mx-auto">
 				<div
 					className="mx-auto mb-16 max-w-2xl translate-y-10 text-center opacity-0 transition-all duration-1000"
