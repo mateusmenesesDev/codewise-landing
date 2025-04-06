@@ -13,7 +13,6 @@ export const TestimonialCard = ({
 	quote,
 	author,
 	role,
-	avatar,
 	rating,
 	linkedinUrl
 }: TestimonialProps) => {
@@ -32,11 +31,6 @@ export const TestimonialCard = ({
 			</div>
 			<p className="relative z-10 mb-8 flex-grow text-lg">{quote}</p>
 			<div className="mt-auto flex items-center">
-				<img
-					src={avatar}
-					alt={author}
-					className="mr-4 h-12 w-12 rounded-full object-cover"
-				/>
 				<div>
 					<div className="flex items-center font-semibold">
 						{author}
