@@ -2,13 +2,12 @@ export const plans = [
 	{
 		title: 'Starter',
 		description: 'Perfect for beginners looking for guidance on fundamentals.',
-		price: '$149.99',
+		price: '$199.99',
 		features: [
-			'2 mentor sessions per month',
-			'Email support',
+			'2 mock interviews per month',
+			'1 mentor sessions per month',
 			'Basic project reviews',
-			'Learning resources',
-			'Community access'
+			'Learning resources'
 		],
 		delay: 0
 	},
@@ -16,14 +15,16 @@ export const plans = [
 		title: 'Professional',
 		description:
 			'Ideal for developers ready to accelerate their career growth.',
-		price: '$249.99',
+		price: '$300.99',
+		promotionalPrice: '$250.99',
 		features: [
 			'4 mentor sessions per month',
-			'Priority email support',
+			'Full project management',
+			'Full interview preparation',
+			'Full Software House experience',
 			'In-depth project reviews',
 			'Custom learning roadmap',
-			'Resume & portfolio review',
-			'Interview preparation'
+			'Resume & portfolio review'
 		],
 		recommended: true,
 		delay: 100
@@ -33,13 +34,11 @@ export const plans = [
 		description: 'For those seeking intensive guidance to reach expert level.',
 		price: '$349.99',
 		features: [
-			'8 mentor sessions per month',
-			'Direct access to mentor',
-			'Advanced project collaboration',
+			'All features from Professional plan',
+			'10m daily sessions (weekly schedule)',
 			'Architecture consultations',
 			'Personalized career coaching',
-			'Job placement assistance',
-			'Lifetime community access'
+			'Job placement assistance'
 		],
 		delay: 200
 	}

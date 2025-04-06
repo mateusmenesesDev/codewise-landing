@@ -4,6 +4,7 @@ import { useEffect, useRef, useState } from 'react';
 interface PlanProps {
 	title: string;
 	price: string;
+	promotionalPrice?: string;
 	description: string;
 	features: string[];
 	recommended?: boolean;
@@ -13,6 +14,7 @@ interface PlanProps {
 const PricingPlan = ({
 	title,
 	price,
+	promotionalPrice,
 	description,
 	features,
 	recommended = false,
@@ -93,12 +95,36 @@ const PricingPlan = ({
 					</p>
 
 					<div className="mb-6">
-						<span className="font-bold text-3xl">{price}</span>
-						<span
-							className={`text-sm ${recommended ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}
-						>
-							/month
-						</span>
+						{recommended && promotionalPrice ? (
+							<div className="flex flex-col">
+								<div className="flex items-center">
+									<span className="font-bold text-3xl">{promotionalPrice}</span>
+									<span className='ml-2 text-primary-foreground/80 text-sm'>
+										/month
+									</span>
+									<span className='ml-2 rounded-full bg-primary-foreground px-2 py-0.5 font-medium text-primary text-xs'>
+										Save 17%
+									</span>
+								</div>
+								<div className="flex items-center">
+									<span className='text-primary-foreground/60 text-sm line-through'>
+										{price}
+									</span>
+									<span className='ml-2 rounded-full bg-primary-foreground/20 px-2 py-0.5 font-medium text-primary-foreground text-xs'>
+										Limited offer
+									</span>
+								</div>
+							</div>
+						) : (
+							<>
+								<span className="font-bold text-3xl">{price}</span>
+								<span
+									className={`text-sm ${recommended ? 'text-primary-foreground/80' : 'text-muted-foreground'}`}
+								>
+									/month
+								</span>
+							</>
+						)}
 					</div>
 
 					<ul className="mb-8 space-y-3">
