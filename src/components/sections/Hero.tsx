@@ -65,9 +65,9 @@ const Hero = () => {
 				<div className="glass mx-auto mt-16 max-w-4xl animate-scale-in rounded-2xl p-6">
 					<div className="grid grid-cols-2 gap-8 md:grid-cols-4">
 						{[
-							{ number: '250+', label: 'Active Mentors' },
-							{ number: '15K+', label: 'Career Transitions' },
-							{ number: '90%', label: 'Success Rate' },
+							{ number: '∞', label: 'Stacks in the market' },
+							{ number: '100%', label: 'Personalized Learning' },
+							{ number: '5/5', label: 'Average Rating' },
 							{ number: '24/7', label: 'Support Access' }
 						].map((stat) => (
 							<div key={stat.number} className="text-center">
