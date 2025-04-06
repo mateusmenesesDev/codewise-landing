@@ -1,4 +1,5 @@
 ---
+import Footer from '../components/Footer.tsx';
 import Header from '../components/Header.tsx';
 import Contact from '../components/sections/Contact/Contact.tsx';
 import FAQ from '../components/sections/FAQ/Faq.tsx';
@@ -8,9 +9,6 @@ import Pricing from '../components/sections/Pricing/Pricing.tsx';
 import ProjectShowcase from '../components/sections/Projects/ProjectShowcase.tsx';
 import Testimonials from '../components/sections/Testimonials/Testimonials';
 import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout>
@@ -24,4 +22,5 @@ import Layout from '../layouts/Layout.astro';
     <FAQ client:load />
     <Contact client:load />
   </main>
+  <Footer />
 </Layout>
