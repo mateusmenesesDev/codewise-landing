@@ -42,7 +42,7 @@ const Header = () => {
 						</a>
 					))}
 					<a
-						href="#join"
+						href="#free-mentorship"
 						className="rounded-full bg-primary px-5 py-2.5 font-medium text-primary-foreground text-sm transition-all duration-300 hover:bg-primary/90 hover:shadow-md"
 					>
 						Get Started
@@ -83,7 +83,7 @@ const Header = () => {
 							onClick={() => {
 								setMobileMenuOpen(false);
 								document
-									.getElementById('join')
+									.getElementById('free-mentorship')
 									?.scrollIntoView({ behavior: 'smooth' });
 							}}
 							className="rounded-full bg-primary px-5 py-2.5 text-center font-medium text-primary-foreground text-sm transition-all duration-300 hover:bg-primary/90"

@@ -48,17 +48,11 @@ const Hero = () => {
 
 					<div className="mt-10 flex animate-fade-in flex-col justify-center gap-4 sm:flex-row">
 						<a
-							href="#join"
+							href="#free-mentorship"
 							className="flex items-center justify-center rounded-full bg-primary px-8 py-3.5 font-medium text-primary-foreground text-sm transition-all duration-300 hover:bg-primary/90 hover:shadow-lg"
 						>
 							Start Your Journey
 							<ArrowRight className="ml-2 h-4 w-4" />
-						</a>
-						<a
-							href="#mentors"
-							className="flex items-center justify-center rounded-full bg-secondary px-8 py-3.5 font-medium text-secondary-foreground text-sm transition-all duration-300 hover:bg-secondary/70"
-						>
-							Meet Our Mentors
 						</a>
 					</div>
 
