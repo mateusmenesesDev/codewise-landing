@@ -12,15 +12,15 @@ import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout>
-  <Header client:load />
+  <Header client:visible />
   <main>
     <Hero />
-    <Features client:load />
-    <ProjectShowcase client:load />
-    <Testimonials client:load />
-    <Pricing client:load />
-    <FAQ client:load />
-    <Contact client:load />
+    <Features client:visible />
+    <ProjectShowcase client:visible />
+    <Testimonials client:visible />
+    <Pricing client:visible />
+    <FAQ client:visible />
+    <Contact client:visible />
   </main>
   <Footer />
 </Layout>
