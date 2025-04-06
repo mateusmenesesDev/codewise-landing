@@ -39,6 +39,7 @@ export const TestimonialCard = ({
 							target="_blank"
 							rel="noopener noreferrer"
 							className="ml-2 text-primary transition-colors hover:text-primary/80"
+							aria-label={`${author}'s LinkedIn profile`}
 						>
 							<Linkedin className="h-4 w-4" />
 						</a>
