@@ -66,7 +66,7 @@ const Header = () => {
 
 			{/* Mobile Navigation */}
 			{mobileMenuOpen && (
-				<div className="glass absolute top-full right-0 left-0 px-4 py-6 md:hidden">
+				<div className='absolute top-full right-0 left-0 bg-secondary px-4 py-6 md:hidden'>
 					<nav className="flex flex-col space-y-4">
 						{navigation.map((item) => (
 							<a
