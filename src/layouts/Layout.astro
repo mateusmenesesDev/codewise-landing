@@ -1,4 +1,5 @@
 ---
+import { author, keywords, pageDescription, pageTitle, url } from "../constants/seo";
 import "../styles/global.css";
 ---
 
@@ -9,7 +10,13 @@ import "../styles/global.css";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
+		<title>{pageTitle}</title>
+		<meta name="description" content={pageDescription} />
+		<meta name="keywords" content={keywords.join(', ')} />
+		<meta name="author" content={author} />
+		<meta property="og:title" content={pageTitle} />
+		<meta property="og:description" content={pageDescription} />
+		<meta property="og:image" content={url} />
 	</head>
 	<body>
 		<slot />
