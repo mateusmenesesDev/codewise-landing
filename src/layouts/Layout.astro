@@ -17,8 +17,15 @@ import "../styles/global.css";
 		<meta property="og:title" content={pageTitle} />
 		<meta property="og:description" content={pageDescription} />
 		<meta property="og:image" content={url} />
+		<script 
+			is:inline
+			defer 
+			src="https://mentoria-analytics.vercel.app/script.js" 
+			data-website-id="c3a5e52e-131e-441a-b0a8-8738283757e6"
+		></script>
 	</head>
 	<body>
 		<slot />
 	</body>
+	
 </html>
