@@ -136,7 +136,6 @@ import CalendlySchedule from '../../CalendlySchedule';
 	import { actions } from 'astro:actions';
 
 	const form = document.querySelector('form') as HTMLFormElement;
-	const successMessage = document.querySelector('.success-message') as HTMLDivElement;
 	const submitButton = form?.querySelector('button[type="submit"]') as HTMLButtonElement;
 	const submitText = submitButton?.querySelector('.submit-text') as HTMLSpanElement;
 	const loadingText = submitButton?.querySelector('.loading-text') as HTMLSpanElement;
@@ -154,9 +153,7 @@ import CalendlySchedule from '../../CalendlySchedule';
 		const formData = new FormData(form);
 		const response = await actions.send(formData);
 		if (response.data?.success) {
-			form.style.display = 'none';
-			successMessage.classList.remove('hidden');
-			window.location.hash = 'submitted';
+			window.location.href = '/thank-you';
 		} else {
 			// Reset button state if submission failed
 			submitText.classList.remove('hidden');
