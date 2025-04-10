@@ -1,13 +1,13 @@
 ---
-import CalendlySchedule from '../components/CalendlySchedule';
 import Layout from '../layouts/Layout.astro';
+import CalendlySchedule from '../components/CalendlySchedule';
 ---
 
-<Layout>
-	<main class="min-h-screen bg-mentor-blue py-16 md:py-24">
+<Layout title="Thank You - CodeWise">
+	<main class="min-h-screen bg-secondary/50 py-16 md:py-24">
 		<div class="container mx-auto px-4 md:px-6">
 			<div class="mx-auto max-w-2xl text-center">
-				<div class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-mentor-purple/10 text-mentor-purple">
+				<div class="mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 text-primary">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="h-8 w-8"
@@ -23,19 +23,17 @@ import Layout from '../layouts/Layout.astro';
 						/>
 					</svg>
 				</div>
-				<h1 class="mb-4 font-bold text-3xl md:text-4xl">
-					Thank You for Applying!
-				</h1>
-				<p class="mb-8 text-lg text-gray-600">
-					Your application has been received successfully. Now, let's schedule your free mentorship session.
+				<h1 class="mb-4 font-bold text-3xl md:text-4xl">Thank You for Applying!</h1>
+				<p class="mb-8 text-muted-foreground">
+					Your application has been received. Please schedule your free mentorship session below.
 				</p>
-			</div>
-
-			<div class="mx-auto max-w-3xl">
-				<div class="overflow-hidden rounded-2xl bg-white p-8 shadow-xl md:p-12">
-					<CalendlySchedule />
-				</div>
+				<CalendlySchedule />
 			</div>
 		</div>
 	</main>
+
+	<script is:inline>
+		// @ts-ignore
+		gtag('event', 'conversion', {'send_to': 'AW-16582091810/SRzXCNez_LYaEKLI-uI9'});
+	</script>
 </Layout> 
