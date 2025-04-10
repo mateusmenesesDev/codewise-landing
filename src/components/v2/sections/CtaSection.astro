@@ -141,6 +141,20 @@ import CalendlySchedule from '../../CalendlySchedule';
 	const loadingText = submitButton?.querySelector('.loading-text') as HTMLSpanElement;
 	const loadingIcon = submitButton?.querySelector('.loading-icon') as SVGElement;
 
+	function gtag_report_conversion(url: string) {
+		var callback = function () {
+			if (typeof(url) != 'undefined') {
+				window.location.href = url;
+			}
+		};
+		// @ts-ignore
+		gtag('event', 'conversion', {
+			'send_to': 'AW-16582091810/SRzXCNez_LYaEKLI-uI9',
+			'event_callback': callback
+		});
+		return false;
+	}
+
 	const handleSubmit = async (e: Event) => {
 		e.preventDefault();
 		
@@ -153,7 +167,7 @@ import CalendlySchedule from '../../CalendlySchedule';
 		const formData = new FormData(form);
 		const response = await actions.send(formData);
 		if (response.data?.success) {
-			window.location.href = '/thank-you';
+			gtag_report_conversion('/thank-you');
 		} else {
 			// Reset button state if submission failed
 			submitText.classList.remove('hidden');
