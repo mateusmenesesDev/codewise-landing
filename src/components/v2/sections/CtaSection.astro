@@ -156,6 +156,7 @@ import CalendlySchedule from '../../CalendlySchedule';
 		if (response.data?.success) {
 			form.style.display = 'none';
 			successMessage.classList.remove('hidden');
+			window.location.hash = 'submitted';
 		} else {
 			// Reset button state if submission failed
 			submitText.classList.remove('hidden');
