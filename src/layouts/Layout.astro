@@ -23,6 +23,18 @@ import "../styles/global.css";
 			src="https://mentoria-analytics.vercel.app/script.js" 
 			data-website-id="c3a5e52e-131e-441a-b0a8-8738283757e6"
 		></script>
+		<!-- Google tag (gtag.js) -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16582091810"></script>
+		<script>
+			// @ts-ignore
+			window.dataLayer = window.dataLayer || [];
+			// @ts-ignore
+			function gtag(){dataLayer.push(arguments);}
+			// @ts-ignore
+			gtag('js', new Date());
+			// @ts-ignore
+			gtag('config', 'AW-16582091810');
+		</script>
 	</head>
 	<body>
 		<slot />
