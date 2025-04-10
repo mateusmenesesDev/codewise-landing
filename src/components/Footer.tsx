@@ -67,7 +67,7 @@ const Footer = () => {
 							<h3 className="mb-4 font-semibold text-lg">Navigation</h3>
 							<ul className="space-y-3">
 								{[
-									{ title: 'Home', href: '#home' },
+									{ title: 'Home', href: '#hero' },
 									{ title: 'Features', href: '#features' },
 									{ title: 'Testimonials', href: '#testimonials' },
 									{ title: 'Contact', href: '#contact' }
@@ -90,12 +90,12 @@ const Footer = () => {
 								Ready to begin your mentorship journey? Connect with us and take
 								the first step towards your goals.
 							</p>
-							<a
+							{/* <a
 								href="#contact"
 								className="inline-flex items-center justify-center rounded-full bg-primary px-6 py-2.5 font-medium text-primary-foreground text-sm transition-colors hover:bg-primary/90"
 							>
 								Contact Us
-							</a>
+							</a> */}
 						</div>
 					</div>
 				</div>

@@ -1,14 +1,11 @@
 ---
 import Footer from '../components/Footer.tsx';
-import Header from '../components/Header.tsx';
-import Contact from '../components/sections/Contact/Contact.astro';
-import FAQ from '../components/sections/FAQ/Faq.tsx';
-import Features from '../components/sections/Features/Features.tsx';
-import FreeMentorship from '../components/sections/FreeMentorship';
-import Hero from '../components/sections/Hero.tsx';
-import Pricing from '../components/sections/Pricing/Pricing.tsx';
-import ProjectShowcase from '../components/sections/Projects/ProjectShowcase.tsx';
-import Testimonials from '../components/sections/Testimonials/Testimonials';
+import Header from '../components/v2/Header';
+import CtaSection from '../components/v2/sections/CtaSection.astro';
+import Features from '../components/v2/sections/Features';
+import Hero from '../components/v2/sections/Hero';
+import HowItWorks from '../components/v2/sections/HowItWorks';
+import Testimonials from '../components/v2/sections/Testimonials';
 import Layout from '../layouts/Layout.astro';
 ---
 
@@ -16,13 +13,10 @@ import Layout from '../layouts/Layout.astro';
   <Header client:visible />
   <main>
     <Hero />
-    <Features client:visible />
-    <ProjectShowcase client:visible />
+    <Features />
+    <HowItWorks />
     <Testimonials client:visible />
-    <FreeMentorship client:visible />
-    <Pricing client:visible />
-    <FAQ client:visible />
-    <Contact />
+    <CtaSection />
   </main>
   <Footer />
 </Layout>

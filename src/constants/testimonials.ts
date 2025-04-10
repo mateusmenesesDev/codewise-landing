@@ -23,7 +23,7 @@ export const testimonials = [
 		quote:
 			'Carrying out this mentoring was extremely important for my career as a dev! In addition to having a lot of knowledge, the mentor is very attentive to the students. I highly recommend having him as a tutor on your journey.',
 		author: 'Rafael Junges',
-		role: 'Backend Engineer at Stripe',
+		role: 'Backend Engineer',
 		avatar:
 			'https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=776&q=80',
 		rating: 5,
