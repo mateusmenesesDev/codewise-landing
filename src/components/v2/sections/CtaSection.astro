@@ -152,12 +152,8 @@ import CalendlySchedule from '../../CalendlySchedule';
 		
 		const formData = new FormData(form);
 		const response = await actions.send(formData);
-		if (!response.data?.success) {
-			// Reset button state if submission failed
-			submitText.classList.remove('hidden');
-			loadingText.classList.add('hidden');
-			loadingIcon.classList.add('hidden');
-			submitButton.disabled = false;
+		if (response.data?.success) {
+			window.location.href = '/thank-you';
 		}
 	};
 
