@@ -23,22 +23,20 @@ import "../styles/global.css";
 			src="https://mentoria-analytics.vercel.app/script.js" 
 			data-website-id="c3a5e52e-131e-441a-b0a8-8738283757e6"
 		></script>
-		<!-- Google tag (gtag.js) -->
-		<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16582091810"></script>
-		<script>
-			// @ts-ignore
-			window.dataLayer = window.dataLayer || [];
-			// @ts-ignore
-			function gtag(){dataLayer.push(arguments);}
-			// @ts-ignore
-			gtag('js', new Date());
-			// @ts-ignore
-			gtag('config', 'AW-16582091810');
-		</script>
-
+		<!-- Google Tag Manager -->
+		<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+		j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+		'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+		})(window,document,'script','dataLayer','GTM-TFRX53P5')
+		;</script>
+	<!-- End Google Tag Manager -->
 	</head>
 	<body>
+		<!-- Google Tag Manager (noscript) -->
+		<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TFRX53P5"
+		height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+	<!-- End Google Tag Manager (noscript) -->
 		<slot />
 	</body>
-	
 </html>
