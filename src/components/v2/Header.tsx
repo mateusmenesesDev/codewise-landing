@@ -1,5 +1,5 @@
 import { Menu, X } from 'lucide-react';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import CodeWiseLogo from '../CodeWiseLogo';
 import { Button } from '../ui/button';
 
@@ -11,31 +11,11 @@ const navigation = [
 ];
 
 const Header = () => {
-	const [isScrolled, setIsScrolled] = useState(false);
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
-	useEffect(() => {
-		const handleScroll = () => {
-			if (window.scrollY > 10) {
-				setIsScrolled(true);
-			} else {
-				setIsScrolled(false);
-			}
-		};
-
-		window.addEventListener('scroll', handleScroll);
-		return () => {
-			window.removeEventListener('scroll', handleScroll);
-		};
-	}, []);
 
 	return (
 		<header>
-			<nav
-				className={`fixed top-0 right-0 left-0 z-50 transition-all duration-300 ${
-					isScrolled ? 'bg-white py-2 shadow-md' : 'bg-transparent py-4'
-				}`}
-			>
+			<nav className="fixed top-0 right-0 left-0 z-50 bg-white py-2 shadow-md">
 				<div className="container mx-auto flex items-center justify-between px-4 md:px-6">
 					<div className="flex items-center">
 						<a href="#hero" className="font-bold text-2xl text-mentor-purple">
