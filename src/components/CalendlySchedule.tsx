@@ -3,7 +3,7 @@ export default function CalendlySchedule() {
 		<>
 			<div
 				className="calendly-inline-widget"
-				data-url="https://calendly.com/mateusppa10/free-mentorship?hide_event_type_details=1"
+				data-url="https://calendly.com/mateusmenesesdev/free-mentorship-facebook?hide_event_type_details=1"
 				style={{ minWidth: '320px', height: '700px' }}
 			/>
 			<script
